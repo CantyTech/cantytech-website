@@ -1,6 +1,6 @@
 # CantyTech
 
-Private Canty Tech monorepo.
+CantyTech Website
 
 ## Frontend (Hugo)
 

@@ -5,7 +5,21 @@ disableKinds = ['taxonomy', 'term']
 
 [params]
   brand = 'CantyTech'
-  headline = 'Technology services that move your business forward'
-  subheadline = 'I help teams build, ship, and improve software with practical engineering support.'
-  ctaText = 'Start a conversation'
-  ctaHref = 'mailto:hello@cantytech.com'
+  eyebrow = "Hi, I'm Matt"
+  headline = 'Tech help from a real person, explained simply.'
+  subheadline = "I fix computer issues, rescue old photos and tapes, recover lost files, and build the odd bit of software — all explained without the jargon. No call centre, no ticket number: just email me and tell me what's wrong."
+  ctaText = 'Email me'
+  ctaHref = 'mailto:matt@cantytech.uk'
+  ctaNote = "I read every message myself, and I'll always reply."
+
+  trustHeading = 'One person, not a call centre'
+  trustBody = "There's no queue, no outsourced support team, and no upselling. When you email, you're talking to the person who'll actually do the work — and I'll always explain what's going on before I touch anything."
+
+  servicesHeading = 'How I can help'
+
+  closingHeading = "Got something that needs sorting?"
+  closingBody = "Tell me what's going on, in your own words — I'll take it from there."
+  closingCtaText = 'Email me'
+  closingCtaNote = 'No sales pitch, no obligation — just a straight answer.'
+
+  footerText = '© 2026 CantyTech · Matt Canty'

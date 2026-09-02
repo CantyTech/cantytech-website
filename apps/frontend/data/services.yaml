@@ -1,9 +1,18 @@
 services:
-  - title: Software Development
-    description: Build and extend production-ready applications tailored to your business goals.
-  - title: Technical Consulting
-    description: Get practical guidance on architecture, delivery, and engineering best practices.
-  - title: Platform Modernization
-    description: Improve reliability, performance, and maintainability across your existing systems.
-  - title: Automation & DevOps
-    description: Streamline CI/CD and operational workflows so your team can deliver faster.
+  - id: it-help
+    featured: true
+    icon: help
+    title: "Computer & IT Help, Explained Simply"
+    description: "Slow laptop, strange pop-ups, a printer that won't connect, Wi-Fi that keeps dropping — whatever's gone wrong, I'll sort it and explain what happened afterwards, in plain English. For homes and small businesses alike, one-off or ongoing."
+  - id: av-digital
+    icon: film
+    title: "Photos, Tapes & Videos — Digitised"
+    description: "Old VHS tapes, camcorder cassettes, and boxes of photos or slides, turned into digital files you can watch, view, and share for years to come."
+  - id: data-recovery
+    icon: shield
+    title: "Data Recovery"
+    description: "Lost photos, documents, or files from a crashed drive, broken laptop, or dead phone? I'll do everything possible to get them back safely."
+  - id: software
+    icon: code
+    title: "Custom Software & Scripting"
+    description: "Bespoke tools and scripts that automate the repetitive stuff, so you can spend less time on busywork and more time on what matters."

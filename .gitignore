@@ -1,3 +1,8 @@
 apps/frontend/public/
 apps/frontend/resources/
 apps/frontend/.hugo_build.lock
+node_modules/
+
+# impeccable local/cache state (not shared project config)
+.impeccable/config.local.json
+**/scripts/.impeccable/
