@@ -1,0 +1,11 @@
+baseURL = 'https://cantytech.github.io/CantyTech/'
+languageCode = 'en-us'
+title = 'CantyTech'
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  brand = 'CantyTech'
+  headline = 'Technology services that move your business forward'
+  subheadline = 'I help teams build, ship, and improve software with practical engineering support.'
+  ctaText = 'Start a conversation'
+  ctaHref = 'mailto:hello@cantytech.com'
