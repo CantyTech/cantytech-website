@@ -1,22 +1,114 @@
 {{ define "main" }}
-<main class="page">
+
+{{ $icons := dict
+  "help" `<path d="M12 18.5v-1c2.2 0 3.5-1.1 3.5-2.7 0-1.3-.9-2-2.1-2.5-1-.4-1.4-.7-1.4-1.3 0-.5.5-.9 1.3-.9.8 0 1.5.3 2.1.7l.7-1.5c-.7-.5-1.6-.8-2.5-.9V7h-1.4v1.4c-1.9.3-2.9 1.5-2.9 2.9 0 1.4.9 2.1 2.4 2.7 1 .4 1.4.7 1.4 1.3 0 .6-.6 1-1.5 1-1 0-1.9-.4-2.5-.9l-.8 1.4c.7.6 1.7 1 2.7 1.1z"/><circle cx="12" cy="12" r="9"/>`
+  "film" `<rect x="3.5" y="5" width="17" height="14" rx="2"/><path d="M8 5v14M16 5v14M3.5 9.5h4.5M3.5 14.5h4.5M16 9.5h4.5M16 14.5h4.5"/>`
+  "shield" `<path d="M12 3.5l7 2.7v5.2c0 4.6-3 7.9-7 9.1-4-1.2-7-4.5-7-9.1V6.2z"/><path d="M8.7 12.2l2.1 2.1 4.3-4.3"/>`
+  "code" `<path d="M9 8l-4.5 4L9 16M15 8l4.5 4-4.5 4M13.5 6l-3 12"/>`
+}}
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#main">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <rect width="32" height="32" rx="8" fill="var(--primary)" />
+        <path d="M9 20C9 12 15 8 23 8c0 8-4 14-12 14-1.5 0-2-.3-2-.3" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+        <path d="M9 23c3-3 6-5 10-7" stroke="var(--accent)" stroke-width="2.2" stroke-linecap="round" />
+      </svg>
+      {{ .Site.Params.brand }}
+    </a>
+    <a class="header-cta" href="{{ .Site.Params.ctaHref }}">{{ .Site.Params.ctaText }}</a>
+  </div>
+</header>
+
+<main class="page" id="main">
   <section class="hero">
-    <p class="brand">{{ .Site.Params.brand }}</p>
-    <h1>{{ .Site.Params.headline }}</h1>
-    <p class="subheadline">{{ .Site.Params.subheadline }}</p>
-    <a class="cta" href="{{ .Site.Params.ctaHref }}">{{ .Site.Params.ctaText }}</a>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero-content">
+        <p class="eyebrow">{{ .Site.Params.eyebrow }}</p>
+        <h1 class="headline">{{ .Site.Params.headline }}</h1>
+        <p class="subheadline">{{ .Site.Params.subheadline }}</p>
+        <a class="cta-primary" href="{{ .Site.Params.ctaHref }}">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 6h16v12H4z" />
+            <path d="M4 7l8 6 8-6" />
+          </svg>
+          {{ .Site.Params.ctaText }}
+        </a>
+        <p class="cta-note">{{ .Site.Params.ctaNote }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="container">
+      <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="8" r="3.5" />
+        <path d="M5 20c0-3.9 3.1-7 7-7s7 3.1 7 7" />
+      </svg>
+      <div>
+        <h2>{{ .Site.Params.trustHeading }}</h2>
+        <p>{{ .Site.Params.trustBody }}</p>
+      </div>
+    </div>
   </section>
 
   <section class="services" aria-label="Services">
-    <h2>Services</h2>
-    <div class="service-grid">
+    <div class="container">
+      <h2>{{ .Site.Params.servicesHeading }}</h2>
+
       {{ range .Site.Data.services.services }}
-      <article class="service-card">
-        <h3>{{ .title }}</h3>
-        <p>{{ .description }}</p>
-      </article>
+        {{ if .featured }}
+        <article class="service-featured">
+          <div class="service-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{{ index $icons .icon | safeHTML }}</svg>
+          </div>
+          <div>
+            <span class="service-badge">Where I start</span>
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+          </div>
+        </article>
+        {{ end }}
       {{ end }}
+
+      <div class="service-grid">
+        {{ range .Site.Data.services.services }}
+          {{ if not .featured }}
+          <article class="service-block">
+            <div class="service-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">{{ index $icons .icon | safeHTML }}</svg>
+            </div>
+            <h3>{{ .title }}</h3>
+            <p>{{ .description }}</p>
+          </article>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="closing">
+      <h2>{{ .Site.Params.closingHeading }}</h2>
+      <p>{{ .Site.Params.closingBody }}</p>
+      <a class="cta-primary" href="{{ .Site.Params.ctaHref }}">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M4 6h16v12H4z" />
+          <path d="M4 7l8 6 8-6" />
+        </svg>
+        {{ .Site.Params.closingCtaText }}
+      </a>
+      <p class="cta-note">{{ .Site.Params.closingCtaNote }}</p>
     </div>
   </section>
 </main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>{{ .Site.Params.footerText }}</p>
+  </div>
+</footer>
+
 {{ end }}
