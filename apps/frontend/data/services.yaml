@@ -1,9 +1,11 @@
 services:
-  - title: Software Development
-    description: Build and extend production-ready applications tailored to your business goals.
-  - title: Technical Consulting
-    description: Get practical guidance on architecture, delivery, and engineering best practices.
-  - title: Platform Modernization
-    description: Improve reliability, performance, and maintainability across your existing systems.
-  - title: Automation & DevOps
-    description: Streamline CI/CD and operational workflows so your team can deliver faster.
+  - title: Computer & IT Help, Explained Simply
+    description: Slow laptop, strange pop-ups, a printer that won't connect, or you're just not sure what's gone wrong — I sort it out and explain what happened in plain English, no jargon required.
+  - title: Home & Small Business IT Support
+    description: Ongoing, friendly support for your computers, Wi-Fi, and devices, so technology stays out of your way whether you're a household or a small team.
+  - title: Photos, Tapes & Videos — Digitised
+    description: Old VHS tapes, camcorder cassettes, and boxes of photos or slides, turned into digital files you can watch, view, and share for years to come.
+  - title: Data Recovery
+    description: Lost photos, documents, or files from a crashed drive, broken laptop, or dead phone? I'll do everything possible to get them back safely.
+  - title: Custom Software & Scripting
+    description: Bespoke tools and scripts that automate the repetitive stuff, so you and your business can spend less time on busywork and more time on what matters.
