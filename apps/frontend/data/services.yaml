@@ -1,0 +1,9 @@
+services:
+  - title: Software Development
+    description: Build and extend production-ready applications tailored to your business goals.
+  - title: Technical Consulting
+    description: Get practical guidance on architecture, delivery, and engineering best practices.
+  - title: Platform Modernization
+    description: Improve reliability, performance, and maintainability across your existing systems.
+  - title: Automation & DevOps
+    description: Streamline CI/CD and operational workflows so your team can deliver faster.

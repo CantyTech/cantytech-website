@@ -1,0 +1,3 @@
+apps/frontend/public/
+apps/frontend/resources/
+apps/frontend/.hugo_build.lock

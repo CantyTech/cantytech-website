@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main class="page">
+  <section class="hero">
+    <p class="brand">{{ .Site.Params.brand }}</p>
+    <h1>{{ .Site.Params.headline }}</h1>
+    <p class="subheadline">{{ .Site.Params.subheadline }}</p>
+    <a class="cta" href="{{ .Site.Params.ctaHref }}">{{ .Site.Params.ctaText }}</a>
+  </section>
+
+  <section class="services" aria-label="Services">
+    <h2>Services</h2>
+    <div class="service-grid">
+      {{ range .Site.Data.services.services }}
+      <article class="service-card">
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+</main>
+{{ end }}
